@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    <bean id="testBean"-->
+<!--          class="org.example.TestBean">-->
+<!--        <constructor-arg value="Neil"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="musicBean"-->
+<!--          class="org.example.ClassicalMusic">-->
+<!--    </bean>-->
+
+<!--    <bean id="musicPlayer"-->
+<!--          class="org.example.MusicPlayer">-->
+<!--        &lt;!&ndash;          <constructor-arg ref="musicBean"/>&ndash;&gt;-->
+<!--        <property name="music" ref="musicBean"/>-->
+<!--    </bean>-->
+
+    <bean id="formatDocBean"
+          class="laba2.FormatDoc">
+    </bean>
+
+    <bean id="careTakerBean"
+          class="laba2.CareTaker">
+    </bean>
+
+    <bean id="mementoBean"
+          class="laba2.Memento">
+    </bean>
+
+    <bean id="userBean"
+          class="laba2.User">
+        <property name="originator" ref="formatDocBean"/>
+    </bean>
+
+
+</beans>
