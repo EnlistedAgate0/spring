@@ -36,8 +36,15 @@
 
     <bean id="userBean"
           class="laba2.User">
-        <property name="originator" ref="formatDocBean"/>
+        <constructor-arg ref="formatDocBean"/>
+        <constructor-arg ref="careTakerBean"/>
+        <constructor-arg ref="mementoBean"/>
     </bean>
+
+<!--    <bean id="userBean"-->
+<!--          class="laba2.User">-->
+<!--        <property name="originator" ref="formatDocBean"/>-->
+<!--    </bean>-->
 
 
 </beans>

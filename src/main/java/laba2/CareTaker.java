@@ -26,7 +26,10 @@ public class CareTaker {
     }
 
     public Memento getMemento() {
-        if (CurrentIndex >= 0) {
+        if (CurrentIndex == 0){
+            return history.get(CurrentIndex);
+        }
+        if (CurrentIndex > 0) {
             CurrentIndex -= 1;
             return history.get(CurrentIndex);
         }

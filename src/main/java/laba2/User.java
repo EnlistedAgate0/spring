@@ -1,22 +1,30 @@
 package laba2;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class User {
-    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-            "applicationContext.xml"
-    );
+//    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+//            "applicationContext.xml"
+//    );
 
-    private Extension originator;
-    private final CareTaker careTaker = context.getBean("careTakerBean", CareTaker.class);
-    private Memento memento = context.getBean("mementoBean", Memento.class);
+//    private Extension originator = context.getBean("formatDocBean", Extension.class);
+//    private final CareTaker careTaker = context.getBean("careTakerBean", CareTaker.class);
+//    private Memento memento = context.getBean("mementoBean", Memento.class);
 
-//    static Extension originator = new FormatDoc();
-//    static CareTaker careTaker = new CareTaker();
-//    static Memento memento = new Memento();
+    private  Extension originator;
+    private  CareTaker careTaker;
+    private  Memento memento;
+
+    public User(Extension originator, CareTaker careTaker, Memento memento) {
+        this.originator = originator;
+        this.careTaker = careTaker;
+        this.memento = memento;
+    }
+
+//    private Extension originator = new FormatDoc();
+//    private CareTaker careTaker = new CareTaker();
+//    private Memento memento = new Memento();
 
     // Метод ввода текста в файл
     public void setText(String text)
@@ -75,5 +83,4 @@ public class User {
         System.out.println("6 Откатить к сохраенению, по номеру сохранения");
         System.out.println("7 Выход");
     }
-
 }

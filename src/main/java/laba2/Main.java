@@ -10,9 +10,8 @@ public class Main {
                 "applicationContext.xml"
         );
 
-        User user = context.getBean("userBean", User.class);
 
-//        User user = new User();
+        User user = context.getBean("userBean", User.class);
 
         String text = "";
         int choice = 0;
