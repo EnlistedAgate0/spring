@@ -12,29 +12,21 @@ public class User {
 //    private final CareTaker careTaker = context.getBean("careTakerBean", CareTaker.class);
 //    private Memento memento = context.getBean("mementoBean", Memento.class);
 
-    private  Extension originator;
+    private  FormatDoc originator;
     private  CareTaker careTaker;
     private  Memento memento;
 
-    public User(Extension originator, CareTaker careTaker, Memento memento) {
+    public User(FormatDoc originator, CareTaker careTaker, Memento memento) {
         this.originator = originator;
         this.careTaker = careTaker;
         this.memento = memento;
     }
-
-//    private Extension originator = new FormatDoc();
-//    private CareTaker careTaker = new CareTaker();
-//    private Memento memento = new Memento();
 
     // Метод ввода текста в файл
     public void setText(String text)
     {
         originator.setText(text);
 
-    }
-
-    public void setOriginator(Extension originator) {
-        this.originator = originator;
     }
 
     // Метод вывода текста из файла

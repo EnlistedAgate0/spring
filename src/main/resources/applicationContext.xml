@@ -7,21 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-<!--    <bean id="testBean"-->
-<!--          class="org.example.TestBean">-->
-<!--        <constructor-arg value="Neil"/>-->
-<!--    </bean>-->
-
-<!--    <bean id="musicBean"-->
-<!--          class="org.example.ClassicalMusic">-->
-<!--    </bean>-->
-
-<!--    <bean id="musicPlayer"-->
-<!--          class="org.example.MusicPlayer">-->
-<!--        &lt;!&ndash;          <constructor-arg ref="musicBean"/>&ndash;&gt;-->
-<!--        <property name="music" ref="musicBean"/>-->
-<!--    </bean>-->
-
     <bean id="formatDocBean"
           class="laba2.FormatDoc">
     </bean>
@@ -40,11 +25,5 @@
         <constructor-arg ref="careTakerBean"/>
         <constructor-arg ref="mementoBean"/>
     </bean>
-
-<!--    <bean id="userBean"-->
-<!--          class="laba2.User">-->
-<!--        <property name="originator" ref="formatDocBean"/>-->
-<!--    </bean>-->
-
 
 </beans>
