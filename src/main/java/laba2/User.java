@@ -4,14 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class User {
-//    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-//            "applicationContext.xml"
-//    );
-
-//    private Extension originator = context.getBean("formatDocBean", Extension.class);
-//    private final CareTaker careTaker = context.getBean("careTakerBean", CareTaker.class);
-//    private Memento memento = context.getBean("mementoBean", Memento.class);
-
     private  FormatDoc originator;
     private  CareTaker careTaker;
     private  Memento memento;
