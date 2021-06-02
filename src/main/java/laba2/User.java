@@ -22,9 +22,9 @@ public class User {
     }
 
     // Метод вывода текста из файла
-    public void printText()
+    public String getText()
     {
-        System.out.println(originator.getText());
+        return originator.getText();
     }
 
     // Метод сохранения текущего текста
@@ -35,12 +35,16 @@ public class User {
     }
 
     // Метод вывода истории сохранений
-    public void printHistory()
+    public StringBuilder getHistory()
     {
+        StringBuilder text = new StringBuilder();
         for (int i = 0; i < careTaker.getHistory().size(); i++) {
             memento = careTaker.getMemento(i);
-            System.out.println("№" + i + " " + memento.getTime() + ": " +  memento.getText());
+            text.append("№");text.append(i);text.append(" ");
+            text.append(memento.getTime());text.append(" ");
+            text.append(memento.getText());text.append("\n");
         }
+        return text;
     }
 
     // Метод восстановления текста из последнего сохрнанения
